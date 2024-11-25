@@ -1,0 +1,21 @@
+.header {
+  max-width: 1240px;
+  margin: auto;
+  height: 58px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 45px 0;
+  &__img {
+    height: 100%;
+  }
+  &__navBar {
+    width: 309px;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.active {
+  text-decoration: underline;
+}
