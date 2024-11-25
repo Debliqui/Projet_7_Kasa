@@ -1,0 +1,24 @@
+.error {
+  margin: auto;
+  max-width: 1240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 139px;
+  &__title {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 288px;
+  }
+  &__message {
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 36px;
+  }
+  & a {
+    text-decoration: underline;
+    font-size: 18px;
+    padding-bottom: 139px;
+  }
+}

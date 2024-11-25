@@ -3,8 +3,13 @@
 // Components
 @import '../style/components/Footer.scss';
 @import '../style/components/Header.scss';
+@import '../style/components/Error.scss';
 
 // Design System
+:root {
+  // Colors
+  --primary-color: #ff6060;
+}
 * {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
