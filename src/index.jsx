@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router'
-import Header from './components/Header/Header'
-import Home from './pages/Home/Home'
-import APropos from './pages/APropos/APropos'
-import Error from './components/Error/Error'
-import Footer from './components/Footer/Footer'
+import Header from './components/Header.jsx'
+import Home from './pages/Home.jsx'
+import APropos from './pages/APropos.jsx'
+import Error from './components/Error.jsx'
+import Footer from './components/Footer.jsx'
 import './utils/style/main.scss'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
