@@ -1,0 +1,30 @@
+.toggleBtn {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  &__title {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  &__icon {
+    &__rotate {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.toggle {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  &__content {
+    font-size: 18px;
+    font-weight: 400;
+  }
+}

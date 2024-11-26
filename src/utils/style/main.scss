@@ -4,6 +4,7 @@
 @use '../style/components/Error.scss';
 @use '../style/components/Banner.scss';
 @use '../style/components/Card.scss';
+@use '../style/components/Collapse.scss';
 
 // Pages
 @use '../style/pages/Home.scss';
@@ -14,7 +15,7 @@
 // Design System
 :root {
   // Colors
-  $primary-color: #ff6060;
+  --primary-color: #ff6060;
 }
 * {
   margin: 0;
