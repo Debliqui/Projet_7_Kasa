@@ -1,17 +1,20 @@
 import Banner from '../../components/Banner/Banner.jsx'
-import styled from 'styled-components'
-
-const HomeContainer = styled.main`
-  max-width: 1240px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-`
+import Card from '../../components/Card/Card.jsx'
+import accommodationList from '../../assets/logement.json'
 
 export default function Home() {
   return (
-    <HomeContainer>
+    <main className="home">
       <Banner />
-    </HomeContainer>
+      <section className="card_container">
+        {accommodationList.map((accommodation) => (
+          <Card
+            key={`${accommodation.id}`}
+            cover={accommodation.cover}
+            title={accommodation.title}
+          />
+        ))}
+      </section>
+    </main>
   )
 }
