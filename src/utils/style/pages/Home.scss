@@ -1,0 +1,16 @@
+.home {
+  max-width: 1240px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.card_container {
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  gap: 50px;
+  padding: 50px;
+  margin-bottom: 50px;
+}
