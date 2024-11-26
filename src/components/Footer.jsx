@@ -1,4 +1,4 @@
-import KasaFooter from '../../assets/images/kasa_white.svg'
+import KasaFooter from '../assets/images/kasa_white.svg'
 
 export default function Footer() {
   const copirite = '© 2020 Kasa. All rights reserved'

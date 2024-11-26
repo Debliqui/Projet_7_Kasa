@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router'
-import KasaHome from '../../assets/images/kasa_desktop.svg'
+import KasaHome from '../assets/images/kasa_desktop.svg'
 
 export default function Header() {
   return (
