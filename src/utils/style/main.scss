@@ -1,19 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
 // Components
-@import '../style/components/Footer.scss';
-@import '../style/components/Header.scss';
-@import '../style/components/Error.scss';
-@import '../style/components/Banner.scss';
-@import '../style/components/Card.scss';
+@use '../style/components/Footer.scss';
+@use '../style/components/Header.scss';
+@use '../style/components/Error.scss';
+@use '../style/components/Banner.scss';
+@use '../style/components/Card.scss';
 
 // Pages
-@import '../style/pages/Home.scss';
+@use '../style/pages/Home.scss';
+@use '../style/pages/AboutUs.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 // Design System
 :root {
   // Colors
-  --primary-color: #ff6060;
+  $primary-color: #ff6060;
 }
 * {
   margin: 0;
@@ -25,4 +26,11 @@ a {
   font-weight: 500;
   text-decoration: none;
   color: black;
+}
+
+main {
+  max-width: 1240px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
 }
