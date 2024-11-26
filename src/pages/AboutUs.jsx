@@ -1,5 +1,6 @@
 import Banner from '../components/Banner'
 import Collapse from '../components/Collapse'
+import AboutUsContentList from '../assets/aboutUsContent.json'
 
 export default function APropos() {
   return (
@@ -8,7 +9,13 @@ export default function APropos() {
         <Banner />
       </section>
       <section className="collapse-liste">
-        <Collapse />
+        {AboutUsContentList.map((AboutUsContent, index) => (
+          <Collapse
+            key={`${AboutUsContent.title}-${index}`}
+            title={AboutUsContent.title}
+            content={AboutUsContent.content}
+          />
+        ))}
       </section>
     </main>
   )
