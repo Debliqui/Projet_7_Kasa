@@ -6,6 +6,7 @@ import Home from './pages/Home.jsx'
 import APropos from './pages/AboutUs.jsx'
 import Error from './components/Error.jsx'
 import Footer from './components/Footer.jsx'
+import AccommodationPages from './pages/AccommodationPages.jsx'
 import './utils/style/main.scss'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
@@ -17,6 +18,7 @@ root.render(
         <Route path="/" element={<Home />} />
         <Route path="/a-propos" element={<APropos />} />
         <Route path="*" element={<Error />} />
+        <Route path="/logement" element={<AccommodationPages />} />
       </Routes>
       <Footer />
     </BrowserRouter>

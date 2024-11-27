@@ -1,0 +1,39 @@
+.slider {
+  display: flex;
+  align-items: center;
+  position: relative;
+  &__content {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 415px;
+    border-radius: 25px;
+  }
+  &__picture {
+    object-fit: cover;
+    border-radius: 25px;
+    &:not(.active) {
+      display: none;
+    }
+  }
+  & p {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+  }
+  .arrow {
+    position: absolute;
+    border: none;
+    background: transparent;
+  }
+  .left {
+    left: 24px;
+  }
+
+  .right {
+    right: 24px;
+  }
+}
