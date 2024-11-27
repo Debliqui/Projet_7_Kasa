@@ -3,6 +3,7 @@ import Card from '../components/Card.jsx'
 import accommodationList from '../assets/accommodation.json'
 
 export default function Home() {
+  document.title = 'Accueil'
   return (
     <main className="home">
       <section className="banner-home">

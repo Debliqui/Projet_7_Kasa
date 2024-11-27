@@ -3,6 +3,7 @@ import Collapse from '../components/Collapse'
 import AboutUsContentList from '../assets/aboutUsContent.json'
 
 export default function APropos() {
+  document.title = 'À propos'
   return (
     <main className="about-us">
       <section className="banner-aboutUs">
