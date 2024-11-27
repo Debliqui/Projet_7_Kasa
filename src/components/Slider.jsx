@@ -1,8 +1,9 @@
 import { useState } from 'react'
+import PropTypes from 'prop-types'
 import ArrowPast from '../assets/icon/arraw_past.svg'
 import ArrowNext from '../assets/icon/arrow_next.svg'
 
-export default function Slider({ pictures }) {
+export default function Slider({ pictures, title }) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const pastSlide = () => {
     const newIndex = currentIndex - 1
@@ -28,7 +29,7 @@ export default function Slider({ pictures }) {
             className={`slider__picture ${index === currentIndex ? 'active' : ''}`}
           >
             <p>{statusSlider}</p>
-            {picture}
+            <img src={picture} alt={title} />
           </div>
         ))}
       </div>
@@ -37,4 +38,8 @@ export default function Slider({ pictures }) {
       </button>
     </div>
   )
+}
+Slider.propTypes = {
+  pictures: PropTypes.array,
+  title: PropTypes.string.isRequired,
 }
