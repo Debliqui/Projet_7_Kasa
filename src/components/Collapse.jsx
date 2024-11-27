@@ -2,7 +2,7 @@ import { useState } from 'react'
 import PropTypes from 'prop-types'
 import Arrow from '../assets/icon/arrow_back.svg'
 
-export default function Collapse({ title, content }) {
+export default function Collapse({ id, title, content }) {
   const [open, setOpen] = useState(false)
   return (
     <>
@@ -11,6 +11,8 @@ export default function Collapse({ title, content }) {
         onClick={() => {
           setOpen(!open)
         }}
+        aria-expanded={open}
+        aria-controls={id}
       >
         <h2 className="toggleBtn__title">{title}</h2>
         <img
@@ -20,7 +22,7 @@ export default function Collapse({ title, content }) {
         />
       </button>
       {open && (
-        <div className="toggle">
+        <div className="toggle" id={id}>
           <p className="toggle__content">{content}</p>
         </div>
       )}

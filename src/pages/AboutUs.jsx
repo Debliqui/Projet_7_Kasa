@@ -12,6 +12,7 @@ export default function APropos() {
         {AboutUsContentList.map((AboutUsContent, index) => (
           <Collapse
             key={`${AboutUsContent.title}-${index}`}
+            id={AboutUsContent.title}
             title={AboutUsContent.title}
             content={AboutUsContent.content}
           />
