@@ -3,6 +3,8 @@
   .description {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 24px;
     &__information {
       &__title {
         color: var(--primary-color);
@@ -15,15 +17,21 @@
       justify-content: flex-end;
       align-items: center;
       height: 64px;
+      gap: 10px;
       &__name {
         width: 93px;
         color: var(--primary-color);
+        text-align: end;
       }
       &__picture {
         width: 64px;
         height: 64px;
         border-radius: 35px;
       }
+    }
+    &__tag {
+      display: flex;
+      gap: 10px;
     }
     &__collapse {
       display: flex;

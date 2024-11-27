@@ -1,9 +1,10 @@
 import accommodationList from '../assets/accommodation.json'
 import Slider from '../components/Slider'
 import Collapse from '../components/Collapse'
+import Tag from '../components/Tag'
 
 export default function AccommodationPages() {
-  const currentPage = accommodationList[0]
+  const currentPage = accommodationList[1]
   return (
     <main>
       <section className="accommodation-slider">
@@ -33,7 +34,10 @@ export default function AccommodationPages() {
               alt={currentPage.host.name}
             />
           </div>
-          <div className="description__tag"></div>
+          <div className="description__tag">
+            <Tag key={`"tag"${currentPage.id}`} tags={currentPage.tags} />
+          </div>
+
           <div className="description__rate"></div>
         </div>
         <div className="description__collapse">
