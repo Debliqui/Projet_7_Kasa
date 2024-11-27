@@ -1,4 +1,36 @@
-.accommodation {
-  max-width: 1240px;
-  margin: auto;
+.accommodation-description {
+  margin-bottom: 50px;
+  .description {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    &__information {
+      &__title {
+        color: var(--primary-color);
+        font-size: 36px;
+        font-weight: 500;
+      }
+    }
+    &__host {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 64px;
+      &__name {
+        width: 93px;
+        color: var(--primary-color);
+      }
+      &__picture {
+        width: 64px;
+        height: 64px;
+        border-radius: 35px;
+      }
+    }
+    &__collapse {
+      display: flex;
+      gap: 76px;
+      .toggle-container {
+        width: 50%;
+      }
+    }
+  }
 }
