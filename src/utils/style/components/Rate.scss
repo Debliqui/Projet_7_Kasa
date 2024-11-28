@@ -1,0 +1,9 @@
+.rate-container {
+  display: flex;
+  justify-content: center;
+  &__star {
+    display: flex;
+    justify-content: center;
+    width: 36px;
+  }
+}

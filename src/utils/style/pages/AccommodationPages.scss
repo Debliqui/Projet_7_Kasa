@@ -33,6 +33,11 @@
       display: flex;
       gap: 10px;
     }
+    &__rate {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
     &__collapse {
       display: flex;
       gap: 76px;
