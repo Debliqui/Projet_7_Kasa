@@ -1,3 +1,4 @@
+import { useParams } from 'react-router-dom'
 import accommodationList from '../assets/accommodation.json'
 import Slider from '../components/Slider'
 import Collapse from '../components/Collapse'
@@ -5,7 +6,13 @@ import Tag from '../components/Tag'
 import Rate from '../components/Rate'
 
 export default function AccommodationPages() {
-  const currentPage = accommodationList[2]
+  const { id } = useParams()
+  const currentPage = accommodationList.find((item) => item.id === id)
+
+  if (!currentPage) {
+    return <div>Hébergement non trouvé</div>
+  }
+
   return (
     <main>
       <section className="accommodation-slider">
@@ -36,7 +43,7 @@ export default function AccommodationPages() {
             />
           </div>
           <div className="description__tag">
-            <Tag key={`"tag"${currentPage.id}`} tags={currentPage.tags} />
+            <Tag tags={currentPage.tags} />
           </div>
 
           <div className="description__rate">
@@ -45,12 +52,12 @@ export default function AccommodationPages() {
         </div>
         <div className="description__collapse">
           <Collapse
-            key={`"description"${currentPage.id}`}
+            key={`description${currentPage.id}`}
             title={'Description'}
             content={currentPage.description}
           />
           <Collapse
-            key={`"equipments"${currentPage.id}`}
+            key={`equipments${currentPage.id}`}
             title={'Équipements'}
             content={currentPage.equipments}
           />

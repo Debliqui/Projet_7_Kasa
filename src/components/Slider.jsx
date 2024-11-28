@@ -17,26 +17,39 @@ export default function Slider({ pictures, title }) {
   }
 
   const statusSlider = `${currentIndex + 1} /${pictures.length}`
+
   return (
-    <div className="slider">
-      <button className="arrow left" onClick={pastSlide}>
-        <img src={ArrowPast} alt="Précédent" />
-      </button>
-      <div className="slider__content">
-        {pictures.map((picture, index) => (
-          <div
-            key={index}
-            className={`slider__picture ${index === currentIndex ? 'active' : ''}`}
-          >
-            <p>{statusSlider}</p>
-            <img src={picture} alt={title} />
+    <>
+      {pictures.length > 1 ? (
+        <div className="slider">
+          <button className="arrow left" onClick={pastSlide}>
+            <img src={ArrowPast} alt="Précédent" />
+          </button>
+          <div className="slider__content">
+            {pictures.map((picture, index) => (
+              <div
+                key={index}
+                className={`slider__picture ${index === currentIndex ? 'active' : ''}`}
+              >
+                <p>{statusSlider}</p>
+                <img src={picture} alt={title} />
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-      <button className="arrow right" onClick={nextSlide}>
-        <img src={ArrowNext} alt="Suivant" />
-      </button>
-    </div>
+          <button className="arrow right" onClick={nextSlide}>
+            <img src={ArrowNext} alt="Suivant" />
+          </button>
+        </div>
+      ) : (
+        <div className="slider">
+          <div className="slider__content">
+            <div className="slider__picture active">
+              <img src={pictures[0]} alt={title} />
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   )
 }
 Slider.propTypes = {

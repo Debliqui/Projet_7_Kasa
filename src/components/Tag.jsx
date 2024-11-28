@@ -3,8 +3,10 @@ import PropTypes from 'prop-types'
 export default function Tag({ tags }) {
   return (
     <>
-      {tags.map((tag) => (
-        <p className="tag">{tag}</p>
+      {tags.map((tag, index) => (
+        <p key={index} className="tag">
+          {tag}
+        </p>
       ))}
     </>
   )
