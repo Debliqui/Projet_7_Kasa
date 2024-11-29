@@ -9,7 +9,7 @@ export default function Home() {
     <main className="home">
       <section className="banner-home">
         <Banner>
-          <h1 className="banner__title">Chez vous, partout et ailleurs</h1>
+          <h2 className="banner__title">Chez vous, partout et ailleurs</h2>
         </Banner>
       </section>
 

@@ -27,9 +27,9 @@ export default function AccommodationPages() {
       <section className="accommodation-description">
         <div className="description">
           <div className="description__information">
-            <h1 className="description__information__title">
+            <h2 className="description__information__title">
               {currentPage.title}
-            </h1>
+            </h2>
             <p className="description__information__location">
               {currentPage.location}
             </p>
