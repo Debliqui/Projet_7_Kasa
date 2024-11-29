@@ -1,18 +1,25 @@
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import accommodationList from '../assets/accommodation.json'
 import Slider from '../components/Slider'
 import Collapse from '../components/Collapse'
 import Tag from '../components/Tag'
 import Rate from '../components/Rate'
+import { useEffect } from 'react'
 
 export default function AccommodationPages() {
   const { id } = useParams()
   const currentPage = accommodationList.find((item) => item.id === id)
 
+  let navigate = useNavigate()
+  useEffect(() => {
+    if (!currentPage) {
+      navigate('/')
+    }
+  }, [currentPage, navigate])
+
   if (!currentPage) {
     return <div>Hébergement non trouvé</div>
   }
-
   return (
     <main>
       <section className="accommodation-slider">
