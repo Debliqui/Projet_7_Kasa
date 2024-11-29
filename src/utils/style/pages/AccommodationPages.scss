@@ -1,48 +1,110 @@
 .accommodation-description {
   margin-bottom: 50px;
   .description {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    margin-bottom: 24px;
+    display: flex;
+    margin-bottom: 50px;
+    // Section information of the accommodation
     &__information {
-      &__title {
-        color: var(--primary-color);
-        font-size: 36px;
-        font-weight: 500;
+      display: flex;
+      flex-direction: column;
+      width: 72%;
+      gap: 24px;
+      &__name {
+        &__title {
+          color: var(--primary-color);
+          font-size: 36px;
+          font-weight: 500;
+        }
+      }
+      &__tag {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
       }
     }
+    // Section of information host
     &__host {
       display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      height: 64px;
-      gap: 10px;
-      &__name {
-        width: 93px;
-        color: var(--primary-color);
-        text-align: end;
-      }
-      &__picture {
-        width: 64px;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 28%;
+      &__username {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
         height: 64px;
-        border-radius: 35px;
+        gap: 10px;
+        &__name {
+          width: 93px;
+          color: var(--primary-color);
+          text-align: end;
+        }
+        &__picture {
+          width: 64px;
+          height: 64px;
+          border-radius: 35px;
+        }
+      }
+      &__rate {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
       }
     }
-    &__tag {
-      display: flex;
-      gap: 10px;
-    }
-    &__rate {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
+
     &__collapse {
       display: flex;
       gap: 76px;
       .toggle-container {
         width: 50%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .accommodation-description {
+    margin-bottom: 27px;
+    .description {
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 12px;
+      &__information {
+        width: 100%;
+        gap: 10px;
+        &__name {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          &__title {
+            font-size: 18px;
+          }
+          &__location {
+            font-size: 14px;
+          }
+        }
+      }
+      &__host {
+        flex-direction: row-reverse;
+        width: 100%;
+        &__username {
+          height: auto;
+          &__name {
+            width: 50px;
+            font-size: 12px;
+          }
+          &__picture {
+            width: 32px;
+            height: 32px;
+          }
+        }
+      }
+      &__collapse {
+        flex-direction: column;
+        gap: 20px;
+        .toggle-container {
+          width: 100%;
+        }
       }
     }
   }

@@ -4,17 +4,21 @@
   position: relative;
   margin-bottom: 30px;
   &__content {
+    border-radius: 25px;
     display: flex;
     align-items: center;
-    overflow: hidden;
     height: 415px;
-    border-radius: 25px;
+    overflow: hidden;
   }
   &__picture {
-    object-fit: cover;
-    border-radius: 25px;
-    &:not(.active) {
+    transition: transform 0.5s ease;
+    &:not(.hidden) {
       display: none;
+    }
+    & img {
+      width: 100%;
+      height: auto;
+      border-radius: 25px;
     }
   }
   & p {
@@ -29,6 +33,7 @@
     position: absolute;
     border: none;
     background: transparent;
+    cursor: pointer;
   }
   .left {
     left: 24px;
@@ -36,5 +41,38 @@
 
   .right {
     right: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider {
+    margin-bottom: 15px;
+    &__content {
+      height: 255px;
+      border-radius: 10px;
+    }
+    & p {
+      display: none;
+    }
+    &__picture {
+      & img {
+        border-radius: 10px;
+      }
+    }
+    & .arrow {
+      & img {
+        width: 12px;
+      }
+    }
+    & .left {
+      left: 0;
+      width: 24px;
+      height: 24px;
+    }
+    & .right {
+      right: 0;
+      width: 24px;
+      height: 24px;
+    }
   }
 }

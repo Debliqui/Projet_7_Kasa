@@ -15,10 +15,29 @@
     color: var(--primary-color);
     font-weight: 500;
     font-size: 36px;
+    text-align: center;
   }
   & a {
     text-decoration: underline;
     font-size: 18px;
     padding-bottom: 139px;
+  }
+}
+
+@media (max-width: 768px) {
+  .error {
+    gap: 113px;
+    &__title {
+      font-size: 96px;
+      padding-top: 86px;
+    }
+    &__message {
+      font-size: 18px;
+      padding: 0 36px;
+    }
+    & a {
+      font-size: 14px;
+      padding-bottom: 113px;
+    }
   }
 }

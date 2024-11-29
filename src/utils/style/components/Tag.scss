@@ -9,3 +9,9 @@
   min-width: 85px;
   padding: 3px 15px;
 }
+
+@media (max-width: 768px) {
+  .tag {
+    font-size: 10px;
+  }
+}

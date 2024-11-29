@@ -27,13 +27,13 @@ export default function Slider({ pictures, title }) {
           </button>
           <div className="slider__content">
             {pictures.map((picture, index) => (
-              <div
+              <figure
                 key={index}
-                className={`slider__picture ${index === currentIndex ? 'active' : ''}`}
+                className={`slider__picture ${index === currentIndex ? 'hidden' : ''}`}
               >
                 <p>{statusSlider}</p>
                 <img src={picture} alt={title} />
-              </div>
+              </figure>
             ))}
           </div>
           <button className="arrow right" onClick={nextSlide}>
@@ -43,7 +43,7 @@ export default function Slider({ pictures, title }) {
       ) : (
         <div className="slider">
           <div className="slider__content">
-            <div className="slider__picture active">
+            <div className="slider__picture hidden">
               <img src={pictures[0]} alt={title} />
             </div>
           </div>
