@@ -7,7 +7,9 @@ export default function APropos() {
   return (
     <main className="about-us">
       <section className="banner-aboutUs">
-        <Banner />
+        <Banner>
+          <h2 className="sr-only">À propos de nous</h2>
+        </Banner>
       </section>
       <section className="collapse-liste">
         {AboutUsContentList.map((AboutUsContent, index) => (

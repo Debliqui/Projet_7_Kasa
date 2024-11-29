@@ -14,7 +14,7 @@ export default function Collapse({ id, title, content }) {
         aria-expanded={open}
         aria-controls={id}
       >
-        <h2 className="toggleBtn__title">{title}</h2>
+        <h3 className="toggleBtn__title">{title}</h3>
         <img
           src={Arrow}
           alt="Fleche vers le bas"
