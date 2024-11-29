@@ -6,16 +6,39 @@
   justify-content: space-between;
   align-items: center;
   padding: 45px 0;
-  &__img {
-    height: 100%;
-  }
   &__navBar {
     width: 309px;
     display: flex;
-    justify-content: space-around;
+    justify-content: end;
+    gap: 57px;
   }
 }
 
 .active {
   text-decoration: underline;
+}
+
+@media (max-width: 1240px) {
+  .header {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 0 27px 0;
+    &__logo {
+      width: 145px;
+    }
+    &__navBar {
+      gap: 26px;
+      text-transform: uppercase;
+    }
+  }
 }

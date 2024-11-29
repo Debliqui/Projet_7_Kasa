@@ -15,7 +15,11 @@ export default function Home() {
 
       <section className="card_container">
         {accommodationList.map((accommodation) => (
-          <NavLink key={accommodation.id} to={`/logement/${accommodation.id}`}>
+          <NavLink
+            className="card__link"
+            key={accommodation.id}
+            to={`/logement/${accommodation.id}`}
+          >
             <Card
               key={`${accommodation.id}`}
               id={accommodation.id}
