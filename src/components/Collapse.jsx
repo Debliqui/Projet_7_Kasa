@@ -18,7 +18,7 @@ export default function Collapse({ id, title, content }) {
         <img
           src={Arrow}
           alt="Fleche vers le bas"
-          className={open ? 'toggleBtn__icon' : 'toggleBtn__icon__rotate'}
+          className={open ? 'toggleBtn__icon__rotate' : 'toggleBtn__icon'}
         />
       </button>
       {open &&

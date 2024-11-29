@@ -32,3 +32,27 @@
     list-style-type: none;
   }
 }
+
+@media (max-width: 768px) {
+  .toggleBtn {
+    height: 30px;
+    &__title {
+      font-size: 13px;
+    }
+    &__icon {
+      width: 16px;
+      &__rotate {
+        width: 16px;
+      }
+    }
+  }
+
+  .toggle {
+    &__content {
+      font-size: 12px;
+    }
+    &__object {
+      font-size: 12px;
+    }
+  }
+}
