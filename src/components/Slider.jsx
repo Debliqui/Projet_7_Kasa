@@ -3,6 +3,12 @@ import PropTypes from 'prop-types'
 import ArrowPast from '../assets/icon/arraw_past.svg'
 import ArrowNext from '../assets/icon/arrow_next.svg'
 
+/**
+ * Slider Component
+ * Carousel display based on urls in .json files - Carousel or simple banner.
+ * @param {String} props.picture
+ * @param {String} props.title
+ */
 export default function Slider({ pictures, title }) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const pastSlide = () => {
@@ -52,6 +58,8 @@ export default function Slider({ pictures, title }) {
     </>
   )
 }
+
+// Defining props types for the Slider component
 Slider.propTypes = {
   pictures: PropTypes.array,
   title: PropTypes.string.isRequired,

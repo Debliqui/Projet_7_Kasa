@@ -1,5 +1,9 @@
 import { Link } from 'react-router-dom'
 
+/**
+ * Error Component
+ * Generate the contents of the 404 error page
+ */
 export default function Error() {
   return (
     <main>

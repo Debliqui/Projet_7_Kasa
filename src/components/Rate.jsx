@@ -1,6 +1,11 @@
 import StarFull from '../assets/icon/star-full.svg'
 import StarEmpty from '../assets/icon/star-empty.svg'
 
+/**
+ * Rate Compinent
+ * Show stars in relation to guest rating
+ * @param {Number} props
+ */
 export default function Rate(props) {
   const scaleValue = props.scaleValue
   const range = [1, 2, 3, 4, 5]
