@@ -1,4 +1,4 @@
-.footer {
+.footer-conatiner {
   height: 209px;
   background-color: black;
   display: flex;
@@ -16,7 +16,7 @@
 }
 
 @media (max-width: 768px) {
-  .footer {
+  .footer-conatiner {
     justify-content: stretch;
     & p {
       width: 122px;

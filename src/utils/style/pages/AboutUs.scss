@@ -1,5 +1,6 @@
 .banner-aboutUs {
   .banner {
+    // Setting the banner background image
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
       url(../../../assets/images/background_about-us.png), no-repeat;
     background-size: cover;
@@ -7,7 +8,7 @@
   }
 }
 
-.collapse-liste {
+.collapse-list {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -17,7 +18,7 @@
 }
 
 @media (max-width: 768px) {
-  .collapse-liste {
+  .collapse-list {
     width: 100%;
     gap: 20px;
     margin-bottom: 19px;

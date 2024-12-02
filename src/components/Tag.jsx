@@ -1,5 +1,10 @@
 import PropTypes from 'prop-types'
 
+/**
+ * Tag Component
+ * Generate housing tags
+ * @param {String} props.tags
+ */
 export default function Tag({ tags }) {
   return (
     <>

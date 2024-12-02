@@ -2,6 +2,13 @@ import { useState } from 'react'
 import PropTypes from 'prop-types'
 import Arrow from '../assets/icon/arrow_back.svg'
 
+/**
+ * Collapse Component
+ * Generate a collapse with a title and contents
+ * @param {String} props.id
+ * @param {String} props.title - Button title
+ * @param {String} props.content - Contents of the collapse
+ */
 export default function Collapse({ id, title, content }) {
   const [open, setOpen] = useState(false)
   return (
@@ -21,6 +28,7 @@ export default function Collapse({ id, title, content }) {
           className={open ? 'toggleBtn__icon__rotate' : 'toggleBtn__icon'}
         />
       </button>
+      {/** Condition that compares whether content in the .json file contains one or more contents. */}
       {open &&
         (typeof content === 'string' ? (
           <div className="toggle" id={id}>
@@ -38,7 +46,7 @@ export default function Collapse({ id, title, content }) {
     </div>
   )
 }
-
+// Defining props types for the Collapse component
 Collapse.protoType = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,

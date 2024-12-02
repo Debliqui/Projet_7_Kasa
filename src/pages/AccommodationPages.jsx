@@ -6,13 +6,19 @@ import Tag from '../components/Tag'
 import Rate from '../components/Rate'
 import { useEffect } from 'react'
 
+/**
+ * Accommodatio Page template
+ * Content of accommodation pages by retrieving the id in the url to generate the page based on data in accommodationList
+ */
 export default function AccommodationPages() {
   const { id } = useParams()
   const currentPage = accommodationList.find((item) => item.id === id)
 
+  // Handling url id errors
   let navigate = useNavigate()
   useEffect(() => {
     if (!currentPage) {
+      // Back to home page in case of error
       navigate('/')
     }
   }, [currentPage, navigate])
@@ -22,6 +28,7 @@ export default function AccommodationPages() {
   }
   return (
     <main>
+      {/** Hero Carousel */}
       <section className="accommodation-slider">
         {currentPage && (
           <Slider
@@ -31,6 +38,7 @@ export default function AccommodationPages() {
           />
         )}
       </section>
+      {/** Accommodation description */}
       <section className="accommodation-description">
         <div className="description">
           <div className="description__information">
@@ -62,6 +70,7 @@ export default function AccommodationPages() {
             </div>
           </div>
         </div>
+        {/** Description Collapse */}
         <div className="description__collapse">
           <Collapse
             key={`description${currentPage.id}`}
