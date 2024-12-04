@@ -8,11 +8,7 @@ export default function Footer() {
   const copirite = '© 2020 Kasa. All rights reserved'
   return (
     <footer className="footer-conatiner">
-      <img
-        className="footer-conatiner__kasa_white"
-        src={KasaFooter}
-        alt="Logo Kasa"
-      />
+      <img className="footer-conatiner__kasa_white" src={KasaFooter} alt="" />
       <p>{copirite}</p>
     </footer>
   )
