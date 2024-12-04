@@ -72,16 +72,16 @@ export default function AccommodationPages() {
         </div>
         {/** Description Collapse */}
         <div className="description__collapse">
-          <Collapse
-            key={`description${currentPage.id}`}
-            title={'Description'}
-            content={currentPage.description}
-          />
-          <Collapse
-            key={`equipments${currentPage.id}`}
-            title={'Équipements'}
-            content={currentPage.equipments}
-          />
+          <Collapse key={`description${currentPage.id}`} title={'Description'}>
+            <p>{currentPage.description}</p>
+          </Collapse>
+          <Collapse key={`equipments${currentPage.id}`} title={'Équipements'}>
+            <ul>
+              {currentPage.equipments.map((equipment, index) => (
+                <li key={index}>{equipment}</li>
+              ))}
+            </ul>
+          </Collapse>
         </div>
       </section>
     </main>

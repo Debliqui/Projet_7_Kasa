@@ -24,11 +24,15 @@
   display: flex;
   flex-direction: column;
   background-color: #f6f6f673;
-  &__content {
+  & ul {
+    padding: 0;
+  }
+  & p,
+  li {
     font-size: 18px;
     font-weight: 400;
   }
-  &__object {
+  & li {
     list-style-type: none;
   }
 }
@@ -48,10 +52,8 @@
   }
 
   .toggle {
-    &__content {
-      font-size: 12px;
-    }
-    &__object {
+    & p,
+    li {
       font-size: 12px;
     }
   }
