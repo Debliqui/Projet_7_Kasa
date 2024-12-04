@@ -23,8 +23,9 @@ export default function APropos() {
             key={`${AboutUsContent.title}-${index}`}
             id={AboutUsContent.title}
             title={AboutUsContent.title}
-            content={AboutUsContent.content}
-          />
+          >
+            <p>{AboutUsContent.content}</p>
+          </Collapse>
         ))}
       </section>
     </main>

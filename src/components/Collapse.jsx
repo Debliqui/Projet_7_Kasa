@@ -7,9 +7,9 @@ import Arrow from '../assets/icon/arrow_back.svg'
  * Generate a collapse with a title and contents
  * @param {String} props.id
  * @param {String} props.title - Button title
- * @param {String} props.content - Contents of the collapse
+ * @param {React.ReactNode} props.children
  */
-export default function Collapse({ id, title, content }) {
+export default function Collapse({ id, title, children }) {
   const [open, setOpen] = useState(false)
   return (
     <div className="toggle-container">
@@ -28,26 +28,15 @@ export default function Collapse({ id, title, content }) {
           className={open ? 'toggleBtn__icon__rotate' : 'toggleBtn__icon'}
         />
       </button>
-      {/** Condition that compares whether content in the .json file contains one or more contents. */}
-      {open &&
-        (typeof content === 'string' ? (
-          <div className="toggle" id={id}>
-            <p className="toggle__content">{content}</p>
-          </div>
-        ) : (
-          <ul className="toggle" id={id}>
-            {content.map((item, index) => (
-              <li key={index} className="toggle__object">
-                {item}
-              </li>
-            ))}
-          </ul>
-        ))}
+      {open && (
+        <div className="toggle" id={id}>
+          {children}
+        </div>
+      )}
     </div>
   )
 }
 // Defining props types for the Collapse component
 Collapse.protoType = {
   title: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired,
 }
