@@ -7,13 +7,13 @@ import PropTypes from 'prop-types'
  */
 export default function Tag({ tags }) {
   return (
-    <>
+    <ul aria-label="tag" className="tag-liste">
       {tags.map((tag, index) => (
-        <p key={index} className="tag">
+        <li key={index} className="tag">
           {tag}
-        </p>
+        </li>
       ))}
-    </>
+    </ul>
   )
 }
 
