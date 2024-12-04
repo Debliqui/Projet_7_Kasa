@@ -12,11 +12,11 @@ export default function Home() {
   return (
     <main className="home">
       {/** Hero Banner  */}
-      <section className="banner-home">
+      <header className="banner-home">
         <Banner>
           <h2 className="banner__title">Chez vous, partout et ailleurs</h2>
         </Banner>
-      </section>
+      </header>
       {/** Card grid with link to associated pages */}
       <section className="card_container">
         {accommodationList.map((accommodation) => (

@@ -11,11 +11,11 @@ export default function APropos() {
   return (
     <main className="about-us">
       {/** Hero Banner  */}
-      <section className="banner-aboutUs">
+      <header className="banner-aboutUs">
         <Banner>
           <h2 className="sr-only">À propos de nous</h2>
         </Banner>
-      </section>
+      </header>
       {/** Collapse List */}
       <section className="collapse-list">
         {AboutUsContentList.map((AboutUsContent, index) => (
