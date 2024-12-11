@@ -19,7 +19,7 @@ export default function AccommodationPages() {
   useEffect(() => {
     if (!currentPage) {
       // Back to home page in case of error
-      navigate('/')
+      navigate('*')
     }
   }, [currentPage, navigate])
 
