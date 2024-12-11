@@ -7,13 +7,17 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  cursor: pointer;
   &__title {
     color: white;
     font-size: 24px;
     font-weight: 700;
   }
   &__icon {
+    transition: transform 200ms ease-in-out;
+    transform: rotate(0);
     &__rotate {
+      transition: transform 200ms ease-in-out;
       transform: rotate(180deg);
     }
   }
