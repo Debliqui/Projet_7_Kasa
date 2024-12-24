@@ -60,6 +60,7 @@
 @media (max-width: 768px) {
   .accommodation-description {
     margin-bottom: 27px;
+    min-height: 46vh;
     .description {
       flex-direction: column;
       gap: 24px;
