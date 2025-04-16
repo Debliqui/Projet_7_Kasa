@@ -1,7 +1,7 @@
 {
   "name": "projet_kasa",
   "version": "0.1.0",
-  "homepage": "https://debliqui.github.io/Projet_7_Kasa/",
+  "homepage": "https://debliqui.github.io/Projet_7_Kasa",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
