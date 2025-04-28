@@ -12,7 +12,7 @@ import './utils/style/main.scss'
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/Projet_7_Kasa">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
